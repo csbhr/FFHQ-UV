@@ -6,7 +6,7 @@ By [Haoran Bai](https://csbhr.github.io/), Di Kang, Haoxian Zhang, [Jinshan Pan]
 
 
 
-![teaser](https://s1.ax1x.com/2022/11/27/zUQoYd.png)
+![teaser](./assets/teaser.png)
 
 **FFHQ-UV** is a large-scale facial UV-texture dataset that contains over 50,000 high-quality texture UV-maps with even illuminations, neutral expressions, and cleaned facial regions, which are desired characteristics for rendering realistic 3D face models under different lighting conditions.
 
