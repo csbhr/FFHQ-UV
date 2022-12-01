@@ -14,8 +14,21 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## Updates
-[2022-11-28] The paper is available [here](https://arxiv.org/abs/2211.13874).  
-[2022-11-27] The download link for the dataset will be available in a few days.  
+[2022-12-01] A new version of the dataset based on latent space interpolation (FFHQ-UV-Interpolate) will be available in a few days, which is with compromised diversity but higher quality and larger scale (**100,000** UV-maps).  
+[2022-12-01] The download link of Baidu Netdisk for FFHQ-UV dataset will be available soon.  
+[2022-12-01] The download script for FFHQ-UV dataset is available.  
+[2022-11-28] The paper is available [here](https://arxiv.org/abs/2211.13874).   
+
+
+## Dataset Downloads
+
+#### Standard FFHQ-UV dataset
+- Download script: "python download_ffhq_uv.py"
+- Baidu Netdisk: Coming soon.
+
+#### FFHQ-UV-Interpolation dataset
+- Coming soon.
+
 
 
 ## Citation
