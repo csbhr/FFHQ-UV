@@ -22,7 +22,7 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 ## Dataset Downloads
 
-#### Standard FFHQ-UV dataset
+#### FFHQ-UV dataset
 - AWS CloudFront: Using the download script.
 ```
 python download_ffhq_uv.py --dataset ffhq-uv-standard --dst_dir ./save_dir
@@ -41,7 +41,7 @@ python download_ffhq_uv.py --dataset ffhq-uv-interpolate --dst_dir ./save_dir
 - Along with the latent codes, we also provide the attributes (gender, age, beard) of each face, which are detected by [Microsoft Face API](https://azure.microsoft.com/en-in/products/cognitive-services/face/).
 - AWS CloudFront: Using the download script.
 ```
-# for Standard FFHQ-UV dataset
+# for FFHQ-UV dataset
 python download_ffhq_uv.py --dataset ffhq-uv-standard-face-latent --dst_dir ./save_dir
 # for FFHQ-UV-Interpolate dataset
 python download_ffhq_uv.py --dataset ffhq-uv-interpolate-face-latent --dst_dir ./save_dir
