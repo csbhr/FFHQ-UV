@@ -28,7 +28,7 @@ python download_ffhq_uv.py --dataset ffhq-uv-standard --dst_dir ./save_dir
 ```
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 
-#### FFHQ-UV-Interpolation dataset
+#### FFHQ-UV-Interpolate dataset
 - AWS CloudFront: Using the download script.
 ```
 python download_ffhq_uv.py --dataset ffhq-uv-interpolate --dst_dir ./save_dir
@@ -36,9 +36,9 @@ python download_ffhq_uv.py --dataset ffhq-uv-interpolate --dst_dir ./save_dir
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 
 
-## FFHQ-UV-Interpolation
+## FFHQ-UV-Interpolate
 
-**FFHQ-UV-Interpolation** is a variant of FFHQ-UV. It is based on latent space interpolation, which is with compromised diversity but higher quality and larger scale (**100,000** UV-maps).
+**FFHQ-UV-Interpolate** is a variant of FFHQ-UV. It is based on latent space interpolation, which is with compromised diversity but higher quality and larger scale (**100,000** UV-maps).
 
 We adopt the following main steps to obtain FFHQ-UV-Interpolate from FFHQ-UV:
 - Automatic data filtering considering BS Error, valid texture area ratio, expression detection, etc.
