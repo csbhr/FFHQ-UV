@@ -22,11 +22,17 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 ## Dataset Downloads
 
 #### Standard FFHQ-UV dataset
-- AWS CloudFront: Using the download script "python download_ffhq_uv.py --dataset ffhq-uv-standard --dst_dir ./save_dir".
+- AWS CloudFront: Using the download script.
+```
+python download_ffhq_uv.py --dataset ffhq-uv-standard --dst_dir ./save_dir
+```
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 
 #### FFHQ-UV-Interpolation dataset
-- AWS CloudFront: Using the download script "python download_ffhq_uv.py --dataset ffhq-uv-interpolate --dst_dir ./save_dir".
+- AWS CloudFront: Using the download script.
+```
+python download_ffhq_uv.py --dataset ffhq-uv-interpolate --dst_dir ./save_dir
+```
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 
 
