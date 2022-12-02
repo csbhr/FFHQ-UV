@@ -14,7 +14,7 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## Updates
-[2022-12-01] A new version of the dataset, namely FFHQ-UV-Interpolate, will be available in a few days.  
+[2022-12-01] The FFHQ-UV-Interpolate dataset is available.  
 [2022-12-01] The FFHQ-UV dataset is available.  
 [2022-11-28] The paper is available [here](https://arxiv.org/abs/2211.13874).   
 
@@ -22,13 +22,30 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 ## Dataset Downloads
 
 #### Standard FFHQ-UV dataset
-- AWS CloudFront: Using the download script "python download_ffhq_uv.py".
+- AWS CloudFront: Using the download script "python download_ffhq_uv.py --dataset ffhq-uv-standard --dst_dir ./save_dir".
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 
 #### FFHQ-UV-Interpolation dataset
-- Coming soon.
-- This version is based on latent space interpolation, which is with compromised diversity but higher quality and larger scale (**100,000** UV-maps).
+- AWS CloudFront: Using the download script "python download_ffhq_uv.py --dataset ffhq-uv-interpolate --dst_dir ./save_dir".
+- Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 
+
+## FFHQ-UV-Interpolation
+
+**FFHQ-UV-Interpolation** is a variant of FFHQ-UV. It is based on latent space interpolation, which is with compromised diversity but higher quality and larger scale (**100,000** UV-maps).
+
+We adopt the following main steps to obtain FFHQ-UV-Interpolate from FFHQ-UV:
+- Automatic data filtering considering BS Error, valid texture area ratio, expression detection, etc.
+- Sample classification considering attributes such as gender, age, beard, etc.
+- Latent space interpolation within each sample category.
+
+More detailed descriptions and source codes will be released later.
+
+Some quantitative comparisons between FFHQ-UV and FFHQ-UV-Interpolate (the values of ID std. are divided by the value of FFHQ):  
+|  Dataset   | ID std. $\uparrow$ | # UV-maps $\uparrow$ | BS Error $\downarrow$ |
+|  ----  | ----  | ----  | ----  |
+| FFHQ-UV  | 90.06% | 54,165 | 7.293 |
+| FFHQ-UV-Interpolate  | 80.12% | 100,000 | 4.522 |
 
 
 ## Citation
