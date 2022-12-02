@@ -14,7 +14,8 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## Updates
-[2022-12-01] The FFHQ-UV-Interpolate dataset is available.  
+[2022-12-02] The latent codes of the multi-view normalized face images are available.  
+[2022-12-02] The FFHQ-UV-Interpolate dataset is available.  
 [2022-12-01] The FFHQ-UV dataset is available.  
 [2022-11-28] The paper is available [here](https://arxiv.org/abs/2211.13874).   
 
