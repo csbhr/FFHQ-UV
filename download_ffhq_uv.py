@@ -39,6 +39,30 @@ def download_ffhq_uv_interpolate(dst_dir):
         download_file(url=url_base + cn, dst_path=os.path.join(dst_dir, cn))
 
 
+def download_ffhq_uv_standard_face_latent(dst_dir):
+    url_base = 'http://d36kyfewqr49fv.cloudfront.net/standard_face_latent/'
+    clip_names = [f'{i:0>3}.zip' for i in range(55)]
+    attr_names = [f'attributes_{i:0>3}.json' for i in range(55)]
+    clip_names = clip_names + attr_names
+
+    os.makedirs(dst_dir, exist_ok=True)
+
+    for cn in clip_names:
+        download_file(url=url_base + cn, dst_path=os.path.join(dst_dir, cn))
+
+
+def download_ffhq_uv_interpolate_face_latent(dst_dir):
+    url_base = 'http://d36kyfewqr49fv.cloudfront.net/interpolate_face_latent/'
+    clip_names = [f'{i:0>3}.zip' for i in range(100)]
+    attr_names = [f'attributes_{i:0>3}.json' for i in range(100)]
+    clip_names = clip_names + attr_names
+
+    os.makedirs(dst_dir, exist_ok=True)
+
+    for cn in clip_names:
+        download_file(url=url_base + cn, dst_path=os.path.join(dst_dir, cn))
+
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description="download")
@@ -52,5 +76,11 @@ if __name__ == '__main__':
     elif args.dataset == 'ffhq-uv-interpolate':
         # download FFHQ-UV-Interpolate dataset
         download_ffhq_uv_interpolate(dst_dir=os.path.join(args.dst_dir, 'ffhq-uv-interpolate'))
+    elif args.dataset == 'ffhq-uv-standard-face-latent':
+        # download face latent codes of Standard FFHQ-UV dataset
+        download_ffhq_uv_standard_face_latent(dst_dir=os.path.join(args.dst_dir, 'ffhq-uv-standard-face-latent'))
+    elif args.dataset == 'ffhq-uv-interpolate-face-latent':
+        # download face latent codes of FFHQ-UV-Interpolate dataset
+        download_ffhq_uv_interpolate_face_latent(dst_dir=os.path.join(args.dst_dir, 'ffhq-uv-interpolate-face-latent'))
     else:
         raise NotImplementedError
