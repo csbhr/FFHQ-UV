@@ -63,7 +63,7 @@ More detailed descriptions and source codes will be released later.
 Some quantitative comparisons between FFHQ-UV and FFHQ-UV-Interpolate (the values of ID std. are divided by the value of FFHQ):  
 |  Dataset   | ID std. $\uparrow$ | # UV-maps $\uparrow$ | BS Error $\downarrow$ |
 |  ----  | ----  | ----  | ----  |
-| FFHQ-UV  | 90.06% | 54,165 | 7.293 |
+| Standard FFHQ-UV  | 90.06% | 54,165 | 7.293 |
 | FFHQ-UV-Interpolate  | 80.12% | 100,000 | 4.522 |
 
 
