@@ -23,14 +23,14 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 ## Dataset Downloads
 
 #### FFHQ-UV dataset
-- AWS CloudFront: Using the download script.
+- Download script.
 ```
 python download_ffhq_uv.py --dataset ffhq-uv-standard --dst_dir ./save_dir
 ```
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 
 #### FFHQ-UV-Interpolate dataset
-- AWS CloudFront: Using the download script.
+- Download script.
 ```
 python download_ffhq_uv.py --dataset ffhq-uv-interpolate --dst_dir ./save_dir
 ```
@@ -39,7 +39,7 @@ python download_ffhq_uv.py --dataset ffhq-uv-interpolate --dst_dir ./save_dir
 #### The latent codes of the normalized face images
 - We provide the latent codes of the multi-view normalized face images which are used for extracting texture UV-maps. One can generate face images by [StyleGAN2](https://github.com/NVlabs/stylegan2) using the official pre-trained [checkpoint](http://d36zk2xti64re0.cloudfront.net/stylegan2/networks/stylegan2-ffhq-config-f.pkl).
 - Along with the latent codes, we also provide the attributes (gender, age, beard) of each face, which are detected by [Microsoft Face API](https://azure.microsoft.com/en-in/products/cognitive-services/face/).
-- AWS CloudFront: Using the download script.
+- Download script.
 ```
 # for FFHQ-UV dataset
 python download_ffhq_uv.py --dataset ffhq-uv-standard-face-latent --dst_dir ./save_dir
