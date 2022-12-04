@@ -58,8 +58,6 @@ We adopt the following main steps to obtain FFHQ-UV-Interpolate from FFHQ-UV:
 - Sample classification considering attributes such as gender, age, beard, etc.
 - Latent space interpolation within each sample category.
 
-More detailed descriptions and source codes will be released later.
-
 Some quantitative comparisons between FFHQ-UV and FFHQ-UV-Interpolate (the values of ID std. are divided by the value of FFHQ):  
 |  Dataset   | ID std. $\uparrow$ | # UV-maps $\uparrow$ | BS Error $\downarrow$ |
 |  ----  | ----  | ----  | ----  |
