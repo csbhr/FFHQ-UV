@@ -62,7 +62,7 @@ Some quantitative comparisons between FFHQ-UV and FFHQ-UV-Interpolate (the value
 |  Dataset   | ID std. $\uparrow$ | # UV-maps $\uparrow$ | BS Error $\downarrow$ |
 |  ----  | ----  | ----  | ----  |
 | FFHQ-UV  | 90.06% | 54,165 | 7.293 |
-| FFHQ-UV-Interpolate  | 80.12% | 100,000 | 4.522 |
+| FFHQ-UV-Interpolate  | 80.12% | 100,000 | 4.490 |
 
 
 ## Citation
