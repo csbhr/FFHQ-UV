@@ -37,7 +37,7 @@ python download_ffhq_uv.py --dataset ffhq-uv-interpolate --dst_dir ./save_dir
 ```
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 
-#### The latent codes of the normalized face images
+#### The latent codes and attributes of the normalized face images
 - We provide the latent codes of the multi-view normalized face images which are used for extracting texture UV-maps. Along with the latent codes, we also provide the attributes (gender, age, beard) of each face, which are detected by [Microsoft Face API](https://azure.microsoft.com/en-in/products/cognitive-services/face/).
 - Download script (from AWS CloudFront):
 ```
