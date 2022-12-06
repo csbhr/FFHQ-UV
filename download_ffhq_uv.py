@@ -19,68 +19,74 @@ def download_file(url, dst_path):
                         bar.update(len(chunk))
 
 
-def download_ffhq_uv_standard(dst_dir):
-    url_base = 'http://d36kyfewqr49fv.cloudfront.net/standard/'
+def download_ffhq_uv(dst_dir):
+    url_base = 'http://d36kyfewqr49fv.cloudfront.net/ffhq-uv/'
     clip_names = [f'{i:0>3}.zip' for i in range(55)]
-
     os.makedirs(dst_dir, exist_ok=True)
-
     for cn in clip_names:
         download_file(url=url_base + cn, dst_path=os.path.join(dst_dir, cn))
 
 
 def download_ffhq_uv_interpolate(dst_dir):
-    url_base = 'http://d36kyfewqr49fv.cloudfront.net/interpolate/'
+    url_base = 'http://d36kyfewqr49fv.cloudfront.net/ffhq-uv-interpolate/'
     clip_names = [f'{i:0>3}.zip' for i in range(100)]
-
     os.makedirs(dst_dir, exist_ok=True)
-
     for cn in clip_names:
         download_file(url=url_base + cn, dst_path=os.path.join(dst_dir, cn))
 
 
-def download_ffhq_uv_standard_face_latent(dst_dir):
-    url_base = 'http://d36kyfewqr49fv.cloudfront.net/standard_face_latent/'
+def download_ffhq_uv_face_latents(dst_dir):
+    url_base = 'http://d36kyfewqr49fv.cloudfront.net/ffhq-uv-face-latents/'
     clip_names = [f'{i:0>3}.zip' for i in range(55)]
-    attr_names = [f'attributes_{i:0>3}.json' for i in range(55)]
-    clip_names = clip_names + attr_names
-
     os.makedirs(dst_dir, exist_ok=True)
-
     for cn in clip_names:
         download_file(url=url_base + cn, dst_path=os.path.join(dst_dir, cn))
 
 
-def download_ffhq_uv_interpolate_face_latent(dst_dir):
-    url_base = 'http://d36kyfewqr49fv.cloudfront.net/interpolate_face_latent/'
+def download_ffhq_uv_interpolate_face_latents(dst_dir):
+    url_base = 'http://d36kyfewqr49fv.cloudfront.net/ffhq-uv-interpolate-face-latents/'
     clip_names = [f'{i:0>3}.zip' for i in range(100)]
-    attr_names = [f'attributes_{i:0>3}.json' for i in range(100)]
-    clip_names = clip_names + attr_names
-
     os.makedirs(dst_dir, exist_ok=True)
-
     for cn in clip_names:
         download_file(url=url_base + cn, dst_path=os.path.join(dst_dir, cn))
+
+
+def download_ffhq_uv_face_attributes(dst_dir):
+    url = 'http://d36kyfewqr49fv.cloudfront.net/ffhq-uv-face-attributes/attributes_000_054.zip'
+    os.makedirs(dst_dir, exist_ok=True)
+    download_file(url=url, dst_path=os.path.join(dst_dir, 'attributes_000_054.zip'))
+
+
+def download_ffhq_uv_interpolate_face_attributes(dst_dir):
+    url = 'http://d36kyfewqr49fv.cloudfront.net/ffhq-uv-interpolate-face-attributes/attributes_000_099.zip'
+    os.makedirs(dst_dir, exist_ok=True)
+    download_file(url=url, dst_path=os.path.join(dst_dir, 'attributes_000_099.zip'))
 
 
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description="download")
-    parser.add_argument("--dataset", type=str, default='ffhq-uv-standard', help="ffhq-uv-standard/ffhq-uv-interpolate")
+    parser.add_argument("--dataset", type=str, default='ffhq-uv', help="ffhq-uv/ffhq-uv-interpolate")
     parser.add_argument("--dst_dir", type=str, default='./', help="The save directory.")
     args = parser.parse_args()
 
-    if args.dataset == 'ffhq-uv-standard':
+    if args.dataset == 'ffhq-uv':
         # download Standard FFHQ-UV dataset
-        download_ffhq_uv_standard(dst_dir=os.path.join(args.dst_dir, 'ffhq-uv-standard'))
+        download_ffhq_uv(dst_dir=os.path.join(args.dst_dir, 'ffhq-uv'))
     elif args.dataset == 'ffhq-uv-interpolate':
         # download FFHQ-UV-Interpolate dataset
         download_ffhq_uv_interpolate(dst_dir=os.path.join(args.dst_dir, 'ffhq-uv-interpolate'))
-    elif args.dataset == 'ffhq-uv-standard-face-latent':
+    elif args.dataset == 'ffhq-uv-face-latents':
         # download face latent codes of Standard FFHQ-UV dataset
-        download_ffhq_uv_standard_face_latent(dst_dir=os.path.join(args.dst_dir, 'ffhq-uv-standard-face-latent'))
-    elif args.dataset == 'ffhq-uv-interpolate-face-latent':
+        download_ffhq_uv_face_latents(dst_dir=os.path.join(args.dst_dir, 'ffhq-uv-face-latents'))
+    elif args.dataset == 'ffhq-uv-interpolate-face-latents':
         # download face latent codes of FFHQ-UV-Interpolate dataset
-        download_ffhq_uv_interpolate_face_latent(dst_dir=os.path.join(args.dst_dir, 'ffhq-uv-interpolate-face-latent'))
+        download_ffhq_uv_interpolate_face_latents(dst_dir=os.path.join(args.dst_dir, 'ffhq-uv-interpolate-face-latents'))
+    elif args.dataset == 'ffhq-uv-face-attributes':
+        # download face attributes of Standard FFHQ-UV dataset
+        download_ffhq_uv_face_attributes(dst_dir=os.path.join(args.dst_dir, 'ffhq-uv-face-attributes'))
+    elif args.dataset == 'ffhq-uv-interpolate-face-attributes':
+        # download face attributes of FFHQ-UV-Interpolate dataset
+        download_ffhq_uv_interpolate_face_attributes(dst_dir=os.path.join(args.dst_dir, 'ffhq-uv-interpolate-face-attributes'))
     else:
         raise NotImplementedError

@@ -6,7 +6,7 @@ By [Haoran Bai](https://csbhr.github.io/), [Di Kang](https://scholar.google.com.
 
 
 
-![teaser](./assets/teaser.png)
+![teaser](./demos/teaser.png)
 
 **FFHQ-UV** is a large-scale facial UV-texture dataset that contains over **50,000** high-quality texture UV-maps with even illuminations, neutral expressions, and cleaned facial regions, which are desired characteristics for rendering realistic 3D face models under different lighting conditions.
 
@@ -14,7 +14,8 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## Updates
-[2022-12-02] The latent codes of the multi-view normalized face images are available.  
+[2022-12-06] The script for generating face images from latent codes is available.  
+[2022-12-02] The latent codes and attributes of the multi-view normalized face images are available.  
 [2022-12-02] The FFHQ-UV-Interpolate dataset is available.  
 [2022-12-01] The FFHQ-UV dataset is available.  
 [2022-11-28] The paper is available [here](https://arxiv.org/abs/2211.13874).   
@@ -23,30 +24,38 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 ## Dataset Downloads
 
 #### FFHQ-UV dataset
-- Download script.
+- Download script (from AWS CloudFront):
 ```
-python download_ffhq_uv.py --dataset ffhq-uv-standard --dst_dir ./save_dir
+python download_ffhq_uv.py --dataset ffhq-uv --dst_dir ./save_dir
 ```
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 
 #### FFHQ-UV-Interpolate dataset
-- Download script.
+- Download script (from AWS CloudFront):
 ```
 python download_ffhq_uv.py --dataset ffhq-uv-interpolate --dst_dir ./save_dir
 ```
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 
 #### The latent codes of the normalized face images
-- We provide the latent codes of the multi-view normalized face images which are used for extracting texture UV-maps. One can generate face images by [StyleGAN2](https://github.com/NVlabs/stylegan2) using the official pre-trained [checkpoint](http://d36zk2xti64re0.cloudfront.net/stylegan2/networks/stylegan2-ffhq-config-f.pkl).
-- Along with the latent codes, we also provide the attributes (gender, age, beard) of each face, which are detected by [Microsoft Face API](https://azure.microsoft.com/en-in/products/cognitive-services/face/).
-- Download script.
+- We provide the latent codes of the multi-view normalized face images which are used for extracting texture UV-maps. Along with the latent codes, we also provide the attributes (gender, age, beard) of each face, which are detected by [Microsoft Face API](https://azure.microsoft.com/en-in/products/cognitive-services/face/).
+- Download script (from AWS CloudFront):
 ```
-# for FFHQ-UV dataset
-python download_ffhq_uv.py --dataset ffhq-uv-standard-face-latent --dst_dir ./save_dir
-# for FFHQ-UV-Interpolate dataset
-python download_ffhq_uv.py --dataset ffhq-uv-interpolate-face-latent --dst_dir ./save_dir
+# for face latent codes of FFHQ-UV dataset
+python download_ffhq_uv.py --dataset ffhq-uv-face-latents --dst_dir ./save_dir
+# for face latent codes of FFHQ-UV-Interpolate dataset
+python download_ffhq_uv.py --dataset ffhq-uv-interpolate-face-latents --dst_dir ./save_dir
+# for face attributes of FFHQ-UV dataset
+python download_ffhq_uv.py --dataset ffhq-uv-face-attributes --dst_dir ./save_dir
+# for face attributes of FFHQ-UV-Interpolate dataset
+python download_ffhq_uv.py --dataset ffhq-uv-interpolate-face-attributes --dst_dir ./save_dir
 ```
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
+- One can generate face images from download latent codes by using the following script. The environment installation can refer to [StyleFlow](https://github.com/RameenAbdal/StyleFlow).
+```
+# the checkpoint of StyleGAN2 can be download from http://d36zk2xti64re0.cloudfront.net/stylegan2/networks/stylegan2-ffhq-config-f.pkl
+python gene_face_from_latent.py --latent_dir ./latent_dir --save_face_dir ./save_face_dir --stylegan_network_pkl ./stylegan2-ffhq-config-f.pkl
+```
 
 
 ## FFHQ-UV-Interpolate
