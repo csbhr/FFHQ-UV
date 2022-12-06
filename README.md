@@ -43,10 +43,13 @@ python download_ffhq_uv.py --dataset ffhq-uv-interpolate --dst_dir ./save_dir
 ```
 # for face latent codes of FFHQ-UV dataset
 python download_ffhq_uv.py --dataset ffhq-uv-face-latents --dst_dir ./save_dir
+
 # for face latent codes of FFHQ-UV-Interpolate dataset
 python download_ffhq_uv.py --dataset ffhq-uv-interpolate-face-latents --dst_dir ./save_dir
+
 # for face attributes of FFHQ-UV dataset
 python download_ffhq_uv.py --dataset ffhq-uv-face-attributes --dst_dir ./save_dir
+
 # for face attributes of FFHQ-UV-Interpolate dataset
 python download_ffhq_uv.py --dataset ffhq-uv-interpolate-face-attributes --dst_dir ./save_dir
 ```
