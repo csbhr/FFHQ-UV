@@ -1,6 +1,6 @@
 # FFHQ-UV
 
-#### [Paper](https://arxiv.org/abs/2211.13874) | [Project Page](https://github.com/csbhr/FFHQ-UV)
+#### [Paper](https://arxiv.org/abs/2211.13874) | [Project Page](https://csbhr.github.io/projects/ffhq-uv/)
 ### FFHQ-UV: Normalized Facial UV-Texture Dataset for 3D Face Reconstruction
 By [Haoran Bai](https://csbhr.github.io/), [Di Kang](https://scholar.google.com.hk/citations?user=2ztThPwAAAAJ&hl=zh-CN), Haoxian Zhang, [Jinshan Pan](https://jspan.github.io/), and [Linchao Bao](https://linchaobao.github.io/)
 
