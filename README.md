@@ -14,6 +14,8 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## Updates
+[2022-12-16] The OneDrive download link is available.  
+[2022-12-16] The AWS CloudFront download link is offline.  
 [2022-12-06] The script for generating face images from latent codes is available.  
 [2022-12-02] The latent codes and attributes of the multi-view normalized face images are available.  
 [2022-12-02] The FFHQ-UV-Interpolate dataset is available.  
@@ -23,41 +25,26 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 ## Dataset Downloads
 
-#### FFHQ-UV dataset
-- Download script (from AWS CloudFront):
-```
-python download_ffhq_uv.py --dataset ffhq-uv --dst_dir ./save_dir
-```
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
-
-#### FFHQ-UV-Interpolate dataset
-- Download script (from AWS CloudFront):
-```
-python download_ffhq_uv.py --dataset ffhq-uv-interpolate --dst_dir ./save_dir
-```
-- Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
+- OneDrive: [download link](https://gdutgz-my.sharepoint.com/:f:/g/personal/csbhr_gdutgz_onmicrosoft_com/EroU0mA5LfBCqcYyr7FSvjgBxBXTUlHEZmYAQRhI2m6S6A?e=hFbejA)
 
 #### The latent codes and attributes of the normalized face images
 - We provide the latent codes of the multi-view normalized face images which are used for extracting texture UV-maps. Along with the latent codes, we also provide the attributes (gender, age, beard) of each face, which are detected by [Microsoft Face API](https://azure.microsoft.com/en-in/products/cognitive-services/face/).
-- Download script (from AWS CloudFront):
-```
-# for face latent codes of FFHQ-UV dataset
-python download_ffhq_uv.py --dataset ffhq-uv-face-latents --dst_dir ./save_dir
-
-# for face latent codes of FFHQ-UV-Interpolate dataset
-python download_ffhq_uv.py --dataset ffhq-uv-interpolate-face-latents --dst_dir ./save_dir
-
-# for face attributes of FFHQ-UV dataset
-python download_ffhq_uv.py --dataset ffhq-uv-face-attributes --dst_dir ./save_dir
-
-# for face attributes of FFHQ-UV-Interpolate dataset
-python download_ffhq_uv.py --dataset ffhq-uv-interpolate-face-attributes --dst_dir ./save_dir
-```
-- Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 - One can generate face images from download latent codes by using the following script. The environment installation can refer to [StyleFlow](https://github.com/RameenAbdal/StyleFlow).
 ```
 # the checkpoint of StyleGAN2 can be download from http://d36zk2xti64re0.cloudfront.net/stylegan2/networks/stylegan2-ffhq-config-f.pkl
 python gene_face_from_latent.py --latent_dir ./latent_dir --save_face_dir ./save_face_dir --stylegan_network_pkl ./stylegan2-ffhq-config-f.pkl
+```
+
+#### Dataset file structure
+
+```
+/FFHQ-UV/ffhq-uv  # FFHQ-UV dataset
+/FFHQ-UV/ffhq-uv-face-latents  # The normalized face images' latent codes of FFHQ-UV dataset
+/FFHQ-UV/ffhq-uv-face-attributes  # The normalized face images' attributes of FFHQ-UV dataset
+/FFHQ-UV/ffhq-uv-interpolate  # FFHQ-UV-Interpolate dataset
+/FFHQ-UV/ffhq-uv-interpolate-face-latents  # The normalized face images' latent codes of FFHQ-UV-Interpolate dataset
+/FFHQ-UV/ffhq-uv-interpolate-face-attributes  # The normalized face images' attributes of FFHQ-UV-Interpolate dataset
 ```
 
 
