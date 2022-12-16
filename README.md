@@ -27,6 +27,17 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 - OneDrive: [download link](https://gdutgz-my.sharepoint.com/:f:/g/personal/csbhr_gdutgz_onmicrosoft_com/EroU0mA5LfBCqcYyr7FSvjgBxBXTUlHEZmYAQRhI2m6S6A?e=hFbejA)
+#### Dataset file structure
+
+```
+|--FFHQ-UV  
+    |--ffhq-uv  # FFHQ-UV dataset
+    |--ffhq-uv-face-latents  # The normalized face images' latent codes of FFHQ-UV dataset
+    |--ffhq-uv-face-attributes  # The normalized face images' attributes of FFHQ-UV dataset
+    |--ffhq-uv-interpolate    # FFHQ-UV-Interpolate dataset
+    |--ffhq-uv-interpolate-face-latents  # The normalized face images' latent codes of FFHQ-UV-Interpolate dataset
+    |--ffhq-uv-interpolate-face-attributes  # The normalized face images' attributes of FFHQ-UV-Interpolate dataset
+```
 
 #### The latent codes and attributes of the normalized face images
 - We provide the latent codes of the multi-view normalized face images which are used for extracting texture UV-maps. Along with the latent codes, we also provide the attributes (gender, age, beard) of each face, which are detected by [Microsoft Face API](https://azure.microsoft.com/en-in/products/cognitive-services/face/).
@@ -34,36 +45,6 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 ```
 # the checkpoint of StyleGAN2 can be download from http://d36zk2xti64re0.cloudfront.net/stylegan2/networks/stylegan2-ffhq-config-f.pkl
 python gene_face_from_latent.py --latent_dir ./latent_dir --save_face_dir ./save_face_dir --stylegan_network_pkl ./stylegan2-ffhq-config-f.pkl
-```
-
-#### Dataset file structure
-
-```
-|--FFHQ-UV  
-    |--ffhq-uv  # FFHQ-UV dataset
-        |--000.zip
-        |--001.zip
-            :
-        |--054.zip
-    |--ffhq-uv-interpolate    # FFHQ-UV-Interpolate dataset
-        |--000.zip
-        |--001.zip
-            :
-        |--099.zip
-    |--ffhq-uv-face-latents  # The normalized face images' latent codes of FFHQ-UV dataset
-        |--000.zip
-        |--001.zip
-            :
-        |--054.zip
-    |--ffhq-uv-interpolate-face-latents  # The normalized face images' latent codes of FFHQ-UV-Interpolate dataset
-        |--000.zip
-        |--001.zip
-            :
-        |--099.zip
-    |--ffhq-uv-face-attributes  # The normalized face images' attributes of FFHQ-UV dataset
-        |--attributes_000_054.zip
-    |--ffhq-uv-interpolate-face-attributes  # The normalized face images' attributes of FFHQ-UV-Interpolate dataset
-        |--attributes_000_099.zip
 ```
 
 
