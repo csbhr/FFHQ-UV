@@ -46,6 +46,21 @@ python gene_face_from_latent.py --latent_dir ./latent_dir --save_face_dir ./save
 /FFHQ-UV/ffhq-uv-interpolate-face-latents  # The normalized face images' latent codes of FFHQ-UV-Interpolate dataset
 /FFHQ-UV/ffhq-uv-interpolate-face-attributes  # The normalized face images' attributes of FFHQ-UV-Interpolate dataset
 ```
+```
+|--FFHQ-UV  
+    |--ffhq-uv  
+        |--000.zip
+        |--001.zip
+            :
+        |--054.zip
+    |--ffhq-uv-face-latents  
+        |--000.zip
+        |--001.zip
+            :
+        |--054.zip
+    |--ffhq-uv-face-attributes  
+        |--attributes_000_054.zip
+```
 
 
 ## FFHQ-UV-Interpolate
