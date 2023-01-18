@@ -2,6 +2,8 @@
 .vscode
 .idea
 *cache*
-/checkpoints
-/topo_assets
+/checkpoints/*
+/topo_assets/*
+!/checkpoints/download and put here
+!/topo_assets/download and put here
 /examples/fitting_examples/outputs*
