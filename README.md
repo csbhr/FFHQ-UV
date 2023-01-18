@@ -14,6 +14,7 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## Updates
+[2022-01-19] The source codes are available.  
 [2022-12-16] The OneDrive download link is available.  
 [2022-12-16] The AWS CloudFront download link is offline.  
 [2022-12-06] The script for generating face images from latent codes is available.  
@@ -23,12 +24,39 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 [2022-11-28] The paper is available [here](https://arxiv.org/abs/2211.13874).   
 
 
-## Dataset Downloads
+## Dependencies
+- Linux + Anaconda
+- CUDA 10.0 + CUDNN 7.6.0
+- Python 3.7
+- dlib: `pip install dlib`
+- PyTorch 1.7.1: `pip install torch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2`
+- TensorBoard: `pip install tensorboard`
+- TensorFlow 1.15.0: `pip install tensorflow-gpu==1.15.0`
+- MS Face API: `pip install --upgrade azure-cognitiveservices-vision-face`
+- Other packages: `pip install tqdm scikit-image opencv-python pillow imageio matplotlib mxnet Ninja google-auth google-auth-oauthlib click requests pyspng imageio-ffmpeg==0.4.3 scikit-learn torchdiffeq==0.0.1 flask kornia==0.2.0 lmdb psutil dominate rtree`
+- PyTorch3D and Nvdiffrast:
+```
+mkdir thirdparty
+cd thirdparty
+git clone https://github.com/facebookresearch/iopath
+git clone https://github.com/facebookresearch/fvcore
+git clone https://github.com/facebookresearch/pytorch3d
+git clone https://github.com/NVlabs/nvdiffrast
+conda install -c bottler nvidiacub
+pip install -e iopath
+pip install -e fvcore
+pip install -e pytorch3d
+pip install -e nvdiffrast
+```
 
+
+## Dataset
+
+#### Download
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
 - OneDrive: [download link](https://gdutgz-my.sharepoint.com/:f:/g/personal/csbhr_gdutgz_onmicrosoft_com/EroU0mA5LfBCqcYyr7FSvjgBxBXTUlHEZmYAQRhI2m6S6A?e=hFbejA)
-#### Dataset file structure
 
+#### Dataset file structure
 ```
 |--FFHQ-UV  
     |--ffhq-uv  # FFHQ-UV dataset
@@ -39,29 +67,37 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
     |--ffhq-uv-interpolate-face-attributes  # The normalized face images' attributes of FFHQ-UV-Interpolate dataset
 ```
 
+#### FFHQ-UV-Interpolate dataset
+- FFHQ-UV-Interpolate is a variant of FFHQ-UV. Please refer to [this readme](./README_ffhq_uv_interpolate.md) for details.
+
 #### The latent codes and attributes of the normalized face images
 - We provide the latent codes of the multi-view normalized face images which are used for extracting texture UV-maps. Along with the latent codes, we also provide the attributes (gender, age, beard) of each face, which are detected by [Microsoft Face API](https://azure.microsoft.com/en-in/products/cognitive-services/face/).
-- One can generate face images from download latent codes by using the following script. The environment installation can refer to [StyleFlow](https://github.com/RameenAbdal/StyleFlow).
+- One can generate face images from download latent codes by using the following script.
 ```
-# the checkpoint of StyleGAN2 can be download from http://d36zk2xti64re0.cloudfront.net/stylegan2/networks/stylegan2-ffhq-config-f.pkl
-python gene_face_from_latent.py --latent_dir ./latent_dir --save_face_dir ./save_face_dir --stylegan_network_pkl ./stylegan2-ffhq-config-f.pkl
+sh run_gene_face_from_latent.sh  # Please refer to this script for detailed configuration
 ```
 
 
-## FFHQ-UV-Interpolate
+## Run source codes
 
-**FFHQ-UV-Interpolate** is a variant of FFHQ-UV. It is based on latent space interpolation, which is with compromised diversity but higher quality and larger scale (**100,000** UV-maps).
+#### Download checkpoints and topo assets
+- Please refer to [this readme](./README_checkpoints.md) for details of checkpoints.
+- Please refer to [this readme](./README_topo_assets.md) for details of topo assets.
 
-We adopt the following main steps to obtain FFHQ-UV-Interpolate from FFHQ-UV:
-- Automatic data filtering considering BS Error, valid texture area ratio, expression detection, etc.
-- Sample classification considering attributes such as gender, age, beard, etc.
-- Latent space interpolation within each sample category.
+#### Create facial UV-texture dataset
+- Prepare a directory of dataset project, which contains a "images" subfolder.
+- Put the original images into the "images" subfolder.
+- Modify the configuration and then run the following script to create the facial UV-texture dataset.
+```
+sh run_ffhq_uv_dataset.sh  # Please refer to this script for detailed configuration
+```
 
-Some quantitative comparisons between FFHQ-UV and FFHQ-UV-Interpolate (the values of ID std. are divided by the value of FFHQ):  
-|  Dataset   | ID std. $\uparrow$ | # UV-maps $\uparrow$ | BS Error $\downarrow$ |
-|  ----  | ----  | ----  | ----  |
-| FFHQ-UV  | 90.06% | 54,165 | 7.293 |
-| FFHQ-UV-Interpolate  | 80.12% | 100,000 | 4.490 |
+#### RGB fitting
+- Put the input images into a folder.
+- Modify the configuration and then run the following script for fitting.
+```
+run_rgb_fitting.sh  # Please refer to this script for detailed configuration
+```
 
 
 ## Citation
