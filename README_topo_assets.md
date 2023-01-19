@@ -1,4 +1,4 @@
-## The topo assets used in FFHQ-UV project
+## The topology assets used in FFHQ-UV project
 
 #### Download
 
@@ -30,7 +30,7 @@
         |--unwrap_1024_info.mat
 ```
 
-#### The introduction of these checkpoints
+#### The introduction of these topology assets
 - *_mask.png: The masks used in texture UV-map unwrapping.
 - hifi3dpp_model_info.mat: The [HiFi3D++](https://github.com/czh-98/REALY) face model information.
 - similarity_Lm3D_all.mat: The 68 3D landmarks on the mesh.

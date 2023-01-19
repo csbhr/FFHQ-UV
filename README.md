@@ -80,9 +80,9 @@ sh run_gen_face_from_latent.sh  # Please refer to this script for detailed confi
 
 ## Run source codes
 
-#### Download checkpoints and topo assets
+#### Download checkpoints and topology assets
 - Please refer to [this readme](./README_checkpoints.md) for details of checkpoints.
-- Please refer to [this readme](./README_topo_assets.md) for details of topo assets.
+- Please refer to [this readme](./README_topo_assets.md) for details of topology assets.
 
 #### Create facial UV-texture dataset
 - Prepare a directory of dataset project, which contains a "images" subfolder.
