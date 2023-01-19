@@ -16,7 +16,7 @@ stylegan_network_pkl=../checkpoints/stylegan_model/stylegan2-ffhq-config-f.pkl
 # Save the generated face images in ${save_face_dir}
 #################################################################
 cd ./DataSet_Step3_Editing
-python gene_face_from_latent.py \
+python gen_face_from_latent.py \
     --latent_dir ${latent_dir} \
     --save_face_dir ${save_face_dir} \
     --stylegan_network_pkl ${stylegan_network_pkl}

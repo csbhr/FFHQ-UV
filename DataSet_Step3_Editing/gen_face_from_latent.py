@@ -69,7 +69,7 @@ class StyleGAN2_Model:
 
 if __name__ == '__main__':
 
-    parser = argparse.ArgumentParser(description="gene_face_from_latent")
+    parser = argparse.ArgumentParser(description="gen_face_from_latent")
     parser.add_argument(
         "--latent_dir",
         type=str,

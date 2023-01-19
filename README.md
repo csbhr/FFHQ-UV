@@ -74,7 +74,7 @@ pip install -e nvdiffrast
 - We provide the latent codes of the multi-view normalized face images which are used for extracting texture UV-maps. Along with the latent codes, we also provide the attributes (gender, age, beard) of each face, which are detected by [Microsoft Face API](https://azure.microsoft.com/en-in/products/cognitive-services/face/).
 - One can generate face images from download latent codes by using the following script.
 ```
-sh run_gene_face_from_latent.sh  # Please refer to this script for detailed configuration
+sh run_gen_face_from_latent.sh  # Please refer to this script for detailed configuration
 ```
 
 
