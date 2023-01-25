@@ -33,8 +33,8 @@ cd ../DataSet_Step2_Det_Attributes
 python run_dpr_light.py \
     --proj_data_dir ${proj_data_dir} \
     --dpr_model_path ${checkpoints_dir}/dpr_model/trained_model_03.t7
-# python run_ms_api_attr.py \
-#     --proj_data_dir ${proj_data_dir}
+python run_ms_api_attr.py \
+    --proj_data_dir ${proj_data_dir}
 
 
 ##################### Step 3. Face Editing ######################
