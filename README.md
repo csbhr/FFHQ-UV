@@ -13,8 +13,11 @@ By [Haoran Bai](https://csbhr.github.io/), [Di Kang](https://scholar.google.com.
 The dataset is derived from a large-scale face image dataset namely [FFHQ](https://github.com/NVlabs/ffhq-dataset), with the help of our fully automatic and robust UV-texture production pipeline. Our pipeline utilizes the recent advances in StyleGAN-based facial image editing approaches to generate multi-view normalized face images from single-image inputs. An elaborated UV-texture extraction, correction, and completion procedure is then applied to produce high-quality UV-maps from the normalized face images. Compared with existing UV-texture datasets, our dataset has more diverse and higher-quality texture maps.
 
 
+## TODO
+- Since Microsoft Face API is not accessible for new users, we will provide project details of the FFHQ-UV dataset creation pipeline in the near future, including inversion latents/faces, detected face attributes, sample correspondence, etc.
+
+
 ## Updates
-[2022-02-22] Since Microsoft Face API is not accessible for new users, we will provide project details of the FFHQ-UV dataset creation pipeline in the near future, including inversion latents/faces, detected face attributes, sample correspondence, etc.  
 [2022-01-19] The source codes are available.  
 [2022-12-16] The OneDrive download link is available.  
 [2022-12-16] The AWS CloudFront download link is offline.  
