@@ -14,7 +14,7 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## TODO
-- Since Microsoft Face API is not accessible for new users, we will provide project details of the FFHQ-UV dataset creation pipeline in the near future, including inversion latents/faces, detected face attributes, sample correspondence, etc.
+- Since Microsoft Face API is not accessible for new users, in order to make it easier for others to reproduce our work, we will provide project details of the FFHQ-UV dataset creation pipeline in the near future, including inverted latents/faces, detected face attributes, sample correspondence, etc.
 
 
 ## Updates
