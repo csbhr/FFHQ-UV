@@ -7,3 +7,5 @@
 !/checkpoints/download and put here
 !/topo_assets/download and put here
 /examples/fitting_examples/outputs*
+/debug_data
+/debug*
