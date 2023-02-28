@@ -1,8 +1,8 @@
 # FFHQ-UV
 
-#### [Paper](https://arxiv.org/abs/2211.13874) | [Project Page](https://csbhr.github.io/projects/ffhq-uv/)
 ### FFHQ-UV: Normalized Facial UV-Texture Dataset for 3D Face Reconstruction
-By [Haoran Bai](https://csbhr.github.io/), [Di Kang](https://scholar.google.com.hk/citations?user=2ztThPwAAAAJ&hl=zh-CN), Haoxian Zhang, [Jinshan Pan](https://jspan.github.io/), and [Linchao Bao](https://linchaobao.github.io/)
+By [Haoran Bai](https://csbhr.github.io/), [Di Kang](https://scholar.google.com.hk/citations?user=2ztThPwAAAAJ&hl=zh-CN), Haoxian Zhang, [Jinshan Pan](https://jspan.github.io/), and [Linchao Bao](https://linchaobao.github.io/)  
+*In CVPR 2023 [[Paper]](https://arxiv.org/abs/2211.13874)*
 
 
 
@@ -18,6 +18,7 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## Updates
+[2022-02-28] This paper will appear in CVPR 2023.  
 [2022-01-19] The source codes are available.  
 [2022-12-16] The OneDrive download link is available.  
 [2022-12-16] The AWS CloudFront download link is offline.  
@@ -106,10 +107,11 @@ run_rgb_fitting.sh  # Please refer to this script for detailed configuration
 
 ## Citation
 ```
-@article{FFHQ-UV,
+@InProceedings{Bai_2023_CVPR,
   title={FFHQ-UV: Normalized Facial UV-Texture Dataset for 3D Face Reconstruction},
   author={Bai, Haoran and Kang, Di and Zhang, Haoxian and Pan, Jinshan and Bao, Linchao},
-  journal={arXiv preprint arXiv:2211.13874},
-  year={2022}
+  booktitle={IEEE Conference on Computer Vision and Pattern Recognition},
+  month={June},
+  year={2023}
 }
 ```
