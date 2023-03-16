@@ -3,6 +3,7 @@
 ### FFHQ-UV: Normalized Facial UV-Texture Dataset for 3D Face Reconstruction
 By [Haoran Bai](https://csbhr.github.io/), [Di Kang](https://scholar.google.com.hk/citations?user=2ztThPwAAAAJ&hl=zh-CN), Haoxian Zhang, [Jinshan Pan](https://jspan.github.io/), and [Linchao Bao](https://linchaobao.github.io/)  
 *In CVPR 2023 [[Paper: https://arxiv.org/abs/2211.13874]](https://arxiv.org/abs/2211.13874)*
+*Rendering demos [[YouTube video]](https://youtu.be/dXFRJODJlNY)*
 
 
 
@@ -13,10 +14,6 @@ By [Haoran Bai](https://csbhr.github.io/), [Di Kang](https://scholar.google.com.
 [![FFHQ-UV: Normalized Facial UV-Texture Dataset for 3D Face Reconstruction](https://res.cloudinary.com/marcomontalbano/image/upload/v1678963317/video_to_markdown/images/youtube--dXFRJODJlNY-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://youtu.be/dXFRJODJlNY "FFHQ-UV: Normalized Facial UV-Texture Dataset for 3D Face Reconstruction")
 
 The dataset is derived from a large-scale face image dataset namely [FFHQ](https://github.com/NVlabs/ffhq-dataset), with the help of our fully automatic and robust UV-texture production pipeline. Our pipeline utilizes the recent advances in StyleGAN-based facial image editing approaches to generate multi-view normalized face images from single-image inputs. An elaborated UV-texture extraction, correction, and completion procedure is then applied to produce high-quality UV-maps from the normalized face images. Compared with existing UV-texture datasets, our dataset has more diverse and higher-quality texture maps.
-
-
-## TODO
-- Since Microsoft Face API is not accessible for new users, in order to make it easier for others to reproduce our work, we will provide project details of the FFHQ-UV dataset creation pipeline in the near future, including inverted latents/faces, detected face attributes, sample correspondence, etc.
 
 
 ## Updates
