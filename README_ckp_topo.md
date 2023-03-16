@@ -1,14 +1,18 @@
-## The checkpoints used in FFHQ-UV project
-
-#### Download
+# Download
 
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
-- OneDrive: [download link](https://gdutgz-my.sharepoint.com/:f:/g/personal/csbhr_gdutgz_onmicrosoft_com/EroU0mA5LfBCqcYyr7FSvjgBxBXTUlHEZmYAQRhI2m6S6A?e=hFbejA)
+- OneDrive: [download link](https://t1h0q-my.sharepoint.com/:f:/g/personal/csbhr_t1h0q_onmicrosoft_com/Em2_9wf4ZD9Bm2JVbnBZKn0B8WuFStiMHu07IYCPRLy7Hw?e=dNwuVW)
 
-#### File structure
+
+# The checkpoints used in FFHQ-UV project
+
+## File structure
 
 ```
 |--FFHQ-UV  
+    |--dataset
+    |--dataset_project
+    |--topo_assets
     |--checkpoints 
         |--arcface_model
             |--ms1mv3_arcface_r50_fp16_backbone.pth
@@ -41,7 +45,7 @@
             |--vgg16.pt
 ```
 
-#### The introduction of these checkpoints
+## The introduction of these checkpoints
 - arcface_model: Arcface backbone, download from [Arcface](https://github.com/deepinsight/insightface/tree/master/recognition/arcface_torch#ms1mv3).
 - deep3d_model: Our trained Deep3D model with shape basis [HiFi3D++](https://github.com/czh-98/REALY).
 - dlib_model: The 68 landmarks detector from [dlib](http://dlib.net/).
@@ -56,3 +60,41 @@
 - stylegan_model: The checkpoint of [StyleGAN2](https://github.com/NVlabs/stylegan2).
 - texgan_model: Our Texture GAN model trained on FFHQ-UV dataset.
 - vgg_model: VGG backbone, download from [this link](https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt).
+
+
+
+# The topology assets used in FFHQ-UV project
+
+## File structure
+
+```
+|--FFHQ-UV  
+    |--dataset
+    |--dataset_project
+    |--checkpoints 
+    |--topo_assets 
+        |--center_face_mask.png
+        |--hair_mask.png
+        |--major_valid_front_mask.png
+        |--major_valid_left_mask.png
+        |--major_valid_right_mask.png
+        |--major_valid_whole_mask.png
+        |--minor_valid_front_mask.png
+        |--minor_valid_left_mask.png
+        |--minor_valid_right_mask.png
+        |--minor_valid_whole_mask.png
+        |--mouth_constract_mask.png
+        |--nosal_base_mask.png
+        |--nostril_mask.png
+        |--template_base_uv.png
+        |--unwrap_1024_info_mask.png
+        |--hifi3dpp_model_info.mat
+        |--similarity_Lm3D_all.mat
+        |--unwrap_1024_info.mat
+```
+
+## The introduction of these topology assets
+- *_mask.png: The masks used in texture UV-map unwrapping.
+- hifi3dpp_model_info.mat: The [HiFi3D++](https://github.com/czh-98/REALY) face model information.
+- similarity_Lm3D_all.mat: The 68 3D landmarks on the mesh.
+- unwrap_1024_info.mat: The coordinates used in texture UV-map unwrapping.
