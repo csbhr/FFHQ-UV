@@ -55,7 +55,7 @@ pip install -e nvdiffrast
 ```
 
 
-## Get Dataset
+## Get dataset
 
 - Please refer to this [README](./README_dataset.md) to download the dataset and learn more.
 
