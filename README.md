@@ -15,6 +15,7 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## Updates
+[2022-03-17] The source codes for adding eyeballs into head mesh are available.  
 [2022-03-16] The project details of the FFHQ-UV dataset creation pipeline are released [here](./README_dataset.md).  
 [2022-03-16] The OneDrive download link was updated and the file structures have been reorganized.  
 [2022-02-28] This paper will appear in CVPR 2023.  
@@ -78,6 +79,13 @@ sh run_ffhq_uv_dataset.sh  # Please refer to this script for detailed configurat
 - Modify the configuration and then run the following script for fitting.
 ```
 run_rgb_fitting.sh  # Please refer to this script for detailed configuration
+```
+
+#### Add eyeballs into head mesh
+- Prepare a head mesh, which is without eyeballs.
+- Modify the configuration and then run the following script to add eyeballs into head mesh.
+```
+sh run_mesh_add_eyeball.sh  # Please refer to this script for detailed configuration
 ```
 
 
