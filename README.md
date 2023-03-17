@@ -58,13 +58,13 @@ pip install -e nvdiffrast
 
 ## Get dataset
 
-- Please refer to this [README](./README_dataset.md) to download the dataset and learn more.
+- Please refer to this [[README]](./README_dataset.md) to download the dataset and learn more.
 
 
 ## Run source codes
 
 #### Download checkpoints and topology assets
-- Please refer to this [README](./README_ckp_topo.md) for details of checkpoints and topology assets.
+- Please refer to this [[README]](./README_ckp_topo.md) for details of checkpoints and topology assets.
 
 #### Create facial UV-texture dataset
 - Prepare a directory of dataset project, which contains a "images" subfolder.
