@@ -15,18 +15,18 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## Updates
-[2022-03-17] The source codes for adding eyeballs into head mesh are available.  
-[2022-03-16] The project details of the FFHQ-UV dataset creation pipeline are released [here](./README_dataset.md).  
+[2022-03-17] The source codes for adding eyeballs into head mesh are available [[here]](./README.md#add-eyeballs-into-head-mesh).  
+[2022-03-16] The project details of the FFHQ-UV dataset creation pipeline are released [[here]](./README_dataset.md#ffhq-uv-dataset-project-details).  
 [2022-03-16] The OneDrive download link was updated and the file structures have been reorganized.  
 [2022-02-28] This paper will appear in CVPR 2023.  
-[2022-01-19] The source codes are available.  
+[2022-01-19] The source codes are available, refer to [[here]](./README.md#run-source-codes) for quickly running.  
 [2022-12-16] The OneDrive download link is available.  
 [2022-12-16] The AWS CloudFront download link is offline.  
 [2022-12-06] The script for generating face images from latent codes is available.  
-[2022-12-02] The latent codes and attributes of the multi-view normalized face images are available.  
+[2022-12-02] The latent codes of the multi-view normalized face images are available.  
 [2022-12-02] The FFHQ-UV-Interpolate dataset is available.  
-[2022-12-01] The FFHQ-UV dataset is available.  
-[2022-11-28] The paper is available [here](https://arxiv.org/abs/2211.13874).   
+[2022-12-01] The FFHQ-UV dataset is available [[here]](./README_dataset.md).  
+[2022-11-28] The paper is available [[here]](https://arxiv.org/abs/2211.13874).   
 
 
 ## Dependencies
