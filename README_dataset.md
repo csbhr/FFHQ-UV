@@ -47,7 +47,7 @@ sh run_gen_face_from_latent.sh  # Please refer to this script for detailed confi
 
 ## FFHQ-UV dataset project details
 - In "/FFHQ-UV/dataset_project".
-- Since Microsoft Face API is not accessible for new users, in order to make it easier for others to reproduce our work, we will provide project details of the FFHQ-UV dataset creation pipeline, including **inverted faces' latent codes** (latents.zip) and **detected face attributes of inverted faces** (lights.zip, attributes.zip, attributes_ms_api.zip).
+- Since Microsoft Face API is not accessible for new users, in order to make it easier for others to reproduce our work, we provide project details of the FFHQ-UV dataset creation pipeline, including **inverted faces' latent codes** (latents.zip) and **detected face attributes of inverted faces** (lights.zip, attributes.zip, attributes_ms_api.zip).
 - With these files, one can directly run step3 (DataSet_Step3_Editing) and step4 (DataSet_Step4_UV_Texture) to generate final texture UV-maps.
 - In "attributes_ms_api.zip", we provide the object returned by MS Face API, where one can find other detected attributes (e.g., age, gender, headPose, smile, facialHair, glasses, emotion, hair, makeup, occlusion, accessories, blur, exposure, noise, qualityForRecognition).
 - Since 380 samples failed in the [encoder4editing](https://github.com/omertov/encoder4editing) inversion task, we only provide information of the remaining 69620 samples.
