@@ -42,7 +42,6 @@ sh run_gen_face_from_latent.sh  # Please refer to this script for detailed confi
 - We provide the **attributes** (gender, age, beard) of each face, which are detected by [Microsoft Face API](https://azure.microsoft.com/en-in/products/cognitive-services/face/)
 - Along with the attributes, we also provide the **corresponding indices in original FFHQ dataset**.
 - We prioritize the quality and illumination properties of the normalized faces, rather than the identity fidelity with the faces in the original FFHQ dataset. Therefore, we discourage researchers from looking for correspondences between samples in FFHQ-UV and the original FFHQ dataset. To do this, we shuffle the samples in the FFHQ-UV dataset.
-
 - In addition, we additionally introduce a very small number of samples (about 1K samples) to alleviate the data biases of FFHQ and StyleGAN (e.g., dark-skinned faces). For these samples, we do not provide indices in the original FFHQ dataset.
 
 
