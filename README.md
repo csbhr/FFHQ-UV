@@ -101,7 +101,7 @@ There are two ways to generate a UV-texture map from a given facial image:
   - The StyleGAN-based editing would change the ID of the faces, resulting in textures with low-fidelity.
 
 #### 2. UV-texture map from: RGB fitting
-- The proposed 3D face reconstruction algorithm, which uses FFHQ-UV dataset to train a nonlinear texture basis.
+- This is the proposed 3D face reconstruction algorithm, which uses FFHQ-UV dataset to train a nonlinear texture basis.
 - See source codes of [RGB fitting](./README.md#rgb-fitting).
 - Advantages:
   - The generated textures are fitted based on the supervision of input faces, which are with high-fidelity.

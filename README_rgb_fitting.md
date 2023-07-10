@@ -18,7 +18,7 @@ run_rgb_fitting.sh  # Please refer to this script for detailed configuration
 ```
 run_rgb_fitting_realy.sh  # Please refer to this script for detailed configuration
 ```
-- To calculate the evaluation metrics of REALY benchmark, please refer to the [official repository](https://github.com/czh-98/REALY). One should sign **Agreement** for downloading the benchmark data.
+- To calculate the evaluation metrics of REALY benchmark, please follow the instructions of the [official repository](https://github.com/czh-98/REALY). One should sign **Agreement** for downloading the benchmark data.
 
 
 ## A new version of RGB fitting
