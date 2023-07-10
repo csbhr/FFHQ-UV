@@ -92,11 +92,12 @@ There are two ways to generate a UV-texture map from a given facial image:
 
 #### 1. UV-texture map from: facial editing + texture unwrapping
 - The FFHQ-UV dataset is created from the FFHQ dataset in this way (Section 3.1 of the paper).
-- See source codes of [facial UV-texture dataset creation pipeline](./README.md#create-facial-uv-texture-dataset),  which including GAN inversion, StyleGAN-based editing, and texture unwrapping steps.
+- See source codes of [facial UV-texture dataset creation pipeline](./README.md#create-facial-uv-texture-dataset),  which including GAN inversion, attribute detection, StyleGAN-based editing, and texture unwrapping steps.
 - Advantages:
   - The generated textures are directly extracted from facial images, which are detailed and with high-quality.
 - Disadvantages:
   - The GAN inversion step would be failed for some samples.
+  - The attribute detection step requires the Microsoft Face API, which is no longer accessible.
   - The StyleGAN-based editing would change the ID of the faces, resulting in textures with low-fidelity.
 
 #### 2. UV-texture map from: RGB fitting
