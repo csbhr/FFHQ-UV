@@ -25,3 +25,11 @@ python step2_fit_processed_data_realy.py \
     --checkpoints_dir ${checkpoints_dir} \
     --topo_dir ${topo_assets_dir} \
     --texgan_model_name texgan_ffhq_uv.pth
+
+
+####################### Copy Fitted Mesh ########################
+# Copy fitted meshes from ${output_dir} to ${output_dir}_fitted_mesh
+#################################################################
+python step3_copy_fitted_mesh.py \
+    --fitted_results_dir ${output_dir} \
+    --mesh_dir ${output_dir}_fitted_mesh
