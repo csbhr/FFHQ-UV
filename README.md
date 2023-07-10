@@ -87,11 +87,11 @@ sh run_mesh_add_eyeball.sh  # Please refer to this script for detailed configura
 ## Generate a UV-texture map from a single facial image
 
 There are two ways to generate a UV-texture map from a given facial image:
-1. Facial editing + texture unwrapping
-2. RGB fitting
+1. Facial editing + texture unwrapping (Section 3.1 of the paper)
+2. RGB fitting (Section 4.2 of the paper)
 
 #### 1. UV-texture map from: facial editing + texture unwrapping
-- The FFHQ-UV dataset is created from the FFHQ dataset in this way (Section 3.1 of the paper).
+- The FFHQ-UV dataset is created from the FFHQ dataset in this way.
 - See source codes of [facial UV-texture dataset creation pipeline](./README.md#create-facial-uv-texture-dataset),  which including GAN inversion, attribute detection, StyleGAN-based editing, and texture unwrapping steps.
 - Advantages:
   - The generated textures are directly extracted from facial images, which are detailed and with high-quality.
@@ -101,7 +101,7 @@ There are two ways to generate a UV-texture map from a given facial image:
   - The StyleGAN-based editing would change the ID of the faces, resulting in textures with low-fidelity.
 
 #### 2. UV-texture map from: RGB fitting
-- The proposed 3D face reconstruction algorithm (Section 4.2 of the paper).
+- The proposed 3D face reconstruction algorithm.
 - See source codes of [RGB fitting](./README.md#rgb-fitting).
 - Advantages:
   - The generated textures are fitted based on the supervision of input faces, which are with high-fidelity.
