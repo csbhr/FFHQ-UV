@@ -10,9 +10,6 @@
 
 ```
 |--FFHQ-UV  
-    |--dataset
-    |--dataset_project
-    |--topo_assets
     |--checkpoints 
         |--arcface_model
             |--ms1mv3_arcface_r50_fp16_backbone.pth
@@ -41,6 +38,7 @@
             |--stylegan2-ffhq-config-f.pkl
         |--texgan_model
             |--texgan_ffhq_uv.pth
+            |--texgan_cropface630resize1024_ffhq_uv_interpolate.pth
         |--vgg_model
             |--vgg16.pt
 ```
@@ -58,7 +56,7 @@
 - resnet_model: ResNet backbone, download from [this link](https://download.pytorch.org/models/resnet18-5c106cde.pth).
 - styleflow_model: The checkpoint of [StyleFlow](https://github.com/RameenAbdal/StyleFlow) and the expression editing direction found by SVM.
 - stylegan_model: The checkpoint of [StyleGAN2](https://github.com/NVlabs/stylegan2).
-- texgan_model: Our Texture GAN model trained on FFHQ-UV dataset.
+- texgan_model: Our Texture GAN models trained on FFHQ-UV dataset or FFHQ-UV-Interpolate dataset.
 - vgg_model: VGG backbone, download from [this link](https://nvlabs-fi-cdn.nvidia.com/stylegan2-ada-pytorch/pretrained/metrics/vgg16.pt).
 
 
@@ -69,9 +67,6 @@
 
 ```
 |--FFHQ-UV  
-    |--dataset
-    |--dataset_project
-    |--checkpoints 
     |--topo_assets 
         |--center_face_mask.png
         |--hair_mask.png
@@ -89,6 +84,7 @@
         |--template_base_uv.png
         |--unwrap_1024_info_mask.png
         |--hifi3dpp_model_info.mat
+        |--hifi3dpp_mean_face.obj
         |--similarity_Lm3D_all.mat
         |--unwrap_1024_info.mat
 ```
@@ -96,5 +92,6 @@
 ## The introduction of these topology assets
 - *_mask.png: The masks used in texture UV-map unwrapping.
 - hifi3dpp_model_info.mat: The [HiFi3D++](https://github.com/czh-98/REALY) face model information.
+- hifi3dpp_mean_face.obj: The mean face of the [HiFi3D++](https://github.com/czh-98/REALY) 3DMM shape basis.
 - similarity_Lm3D_all.mat: The 68 3D landmarks on the mesh.
 - unwrap_1024_info.mat: The coordinates used in texture UV-map unwrapping.

@@ -9,8 +9,6 @@
 ## Dataset file structure
 ```
 |--FFHQ-UV  
-    |--topo_assets
-    |--checkpoints
     |--dataset
         |--ffhq-uv  # FFHQ-UV dataset
             |--uv-maps  # facial texture UV-maps

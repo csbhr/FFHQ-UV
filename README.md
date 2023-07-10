@@ -82,7 +82,7 @@ run_rgb_fitting.sh  # Please refer to this script for detailed configuration
 ```
 
 #### Add eyeballs into head mesh
-- Prepare a head mesh, which is without eyeballs.
+- Prepare a head mesh with HIFI3D topology, which is without eyeballs.
 - Modify the configuration and then run the following script to add eyeballs into head mesh.
 ```
 sh run_mesh_add_eyeball.sh  # Please refer to this script for detailed configuration
