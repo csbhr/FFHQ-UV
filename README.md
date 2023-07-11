@@ -15,6 +15,7 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## Updates
+[2022-07-11] A solution for using our UV-texture maps on a [FLAME](https://flame.is.tue.mpg.de/) mesh is available [[here]](./README_flame2hifi3d.md).  
 [2022-07-10] A more detailed description and a new version of the RGB fitting process is available [[here]](./README_rgb_fitting.md).  
 [2022-07-10] A more detailed description of the facial UV-texture dataset creation pipeline is available [[here]](./README_create_uv_texture.md).  
 [2022-03-17] The source codes for adding eyeballs into head mesh are available [[here]](./README.md#add-eyeballs-into-head-mesh).  
@@ -67,7 +68,7 @@ pip install -e nvdiffrast
 ### Download checkpoints and topology assets
 - Please refer to this [[README]](./README_ckp_topo.md) for details of checkpoints and topology assets.
 
-### Create facial UV-texture dataset
+### Create FFHQ-UV dataset
 - Please refer to this [[README]](./README_create_uv_texture.md) for details of running facial UV-texture dataset creation pipeline.
 - **Microsoft Face API is not accessible for new users**, one can find an alternative API, or manually fill in the [json file](./examples/dataset_examples/attributes/01223.json) to avoid this step.
 - **We provide the detected facial attributes of the FFHQ dataset we used**, please find details from [here](https://github.com/csbhr/FFHQ-UV/blob/main/README_dataset.md#ffhq-uv-dataset-project-details).
@@ -92,7 +93,7 @@ There are two ways to generate a UV-texture map from a given facial image:
 
 #### 1. UV-texture map from: facial editing + texture unwrapping
 - The FFHQ-UV dataset is created from the FFHQ dataset in this way.
-- See source codes of [facial UV-texture dataset creation pipeline](./README.md#create-facial-uv-texture-dataset),  which including GAN inversion, attribute detection, StyleGAN-based editing, and texture unwrapping steps.
+- See source codes of [facial UV-texture dataset creation pipeline](./README.md#create-ffhq-uv-dataset),  which including GAN inversion, attribute detection, StyleGAN-based editing, and texture unwrapping steps.
 - Advantages:
   - The generated textures are directly extracted from facial images, which are detailed and with high-quality.
 - Disadvantages:
@@ -111,6 +112,10 @@ There are two ways to generate a UV-texture map from a given facial image:
 
 
 
+## Using our UV-texture maps on a FLAME mesh
+- We provide a solution for using our UV-texture maps on a [FLAME](https://flame.is.tue.mpg.de/) mesh, please refer to this [[README]](./README_flame2hifi3d.md) for details.
+
+
 ## Citation
 ```
 @InProceedings{Bai_2023_CVPR,
@@ -121,3 +126,8 @@ There are two ways to generate a UV-texture map from a given facial image:
   year={2023}
 }
 ```
+
+## Acknowledgments
+This implementation builds upon the awesome work done by Tov et al. ([e4e](https://github.com/omertov/encoder4editing)), Zhou et al. ([DPR](https://github.com/zhhoper/DPR)), Abdal et al. ([StyleFlow](https://github.com/RameenAbdal/StyleFlow)), and Karras et al. ([StyleGAN2](https://github.com/NVlabs/stylegan2), [StyleGAN2-ADA-PyTorch](https://github.com/NVlabs/stylegan2-ada-pytorch), [FFHQ](https://github.com/NVlabs/ffhq-dataset)).
+
+This work is based on [HiFi3D++](https://github.com/czh-98/REALY) topology, and was supported by Tencent AI Lab.

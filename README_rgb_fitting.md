@@ -32,7 +32,7 @@ run_rgb_fitting_cropface630resize1024.sh  # Please refer to this script for deta
 ```
 - In some samples, this version is able to generate UV-texture maps with more details, such as the sample below.
 
-![fitting samples](https://s1.ax1x.com/2023/07/10/pCR1d5n.png)
+![fitting samples](./demos/imgs/new_version_of_rgb_fitting.png)
 
 
 
