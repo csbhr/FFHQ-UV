@@ -27,6 +27,7 @@ sh run_flame_apply_hifi3d_uv.sh  # Please refer to this script for detailed conf
 #### The range of UV coordinates
 - The range of UV coordinates for the facial area is (0-1, 0-1).
 - The range of UV coordinates for the eyeball area is (2-3, 0-1).
+
 ![uv_coordinates_vis.png](./FLAME_Apply_HIFI3D_UV/flame2hifi3d_assets/uv_coordinates_vis.png)
 
 #### Visualization
