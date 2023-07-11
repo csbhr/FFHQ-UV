@@ -128,6 +128,6 @@ There are two ways to generate a UV-texture map from a given facial image:
 ```
 
 ## Acknowledgments
-This implementation builds upon the awesome work done by Tov et al. ([e4e](https://github.com/omertov/encoder4editing)), Zhou et al. ([DPR](https://github.com/zhhoper/DPR)), Abdal et al. ([StyleFlow](https://github.com/RameenAbdal/StyleFlow)), and Karras et al. ([StyleGAN2](https://github.com/NVlabs/stylegan2), [StyleGAN2-ADA-PyTorch](https://github.com/NVlabs/stylegan2-ada-pytorch), [FFHQ](https://github.com/NVlabs/ffhq-dataset)).
+This implementation builds upon the awesome works done by Tov et al. ([e4e](https://github.com/omertov/encoder4editing)), Zhou et al. ([DPR](https://github.com/zhhoper/DPR)), Abdal et al. ([StyleFlow](https://github.com/RameenAbdal/StyleFlow)), and Karras et al. ([StyleGAN2](https://github.com/NVlabs/stylegan2), [StyleGAN2-ADA-PyTorch](https://github.com/NVlabs/stylegan2-ada-pytorch), [FFHQ](https://github.com/NVlabs/ffhq-dataset)).
 
 This work is based on [HiFi3D++](https://github.com/czh-98/REALY) topology, and was supported by Tencent AI Lab.
