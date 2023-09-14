@@ -15,14 +15,14 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## Updates
-[2022-07-11] A solution for using our UV-texture maps on a [FLAME](https://flame.is.tue.mpg.de/) mesh is available [[here]](./README_flame2hifi3d.md).  
-[2022-07-10] A more detailed description and a new version of the RGB fitting process is available [[here]](./README_rgb_fitting.md).  
-[2022-07-10] A more detailed description of the facial UV-texture dataset creation pipeline is available [[here]](./README_create_uv_texture.md).  
-[2022-03-17] The source codes for adding eyeballs into head mesh are available [[here]](./README.md#add-eyeballs-into-head-mesh).  
-[2022-03-16] The project details of the FFHQ-UV dataset creation pipeline are released [[here]](./README_dataset.md#ffhq-uv-dataset-project-details).  
-[2022-03-16] The OneDrive download link was updated and the file structures have been reorganized.  
-[2022-02-28] This paper will appear in CVPR 2023.  
-[2022-01-19] The source codes are available, refer to [[here]](./README.md#run-source-codes) for quickly running.  
+[2023-07-11] A solution for using our UV-texture maps on a [FLAME](https://flame.is.tue.mpg.de/) mesh is available [[here]](./README_flame2hifi3d.md).  
+[2023-07-10] A more detailed description and a new version of the RGB fitting process is available [[here]](./README_rgb_fitting.md).  
+[2023-07-10] A more detailed description of the facial UV-texture dataset creation pipeline is available [[here]](./README_create_uv_texture.md).  
+[2023-03-17] The source codes for adding eyeballs into head mesh are available [[here]](./README.md#add-eyeballs-into-head-mesh).  
+[2023-03-16] The project details of the FFHQ-UV dataset creation pipeline are released [[here]](./README_dataset.md#ffhq-uv-dataset-project-details).  
+[2023-03-16] The OneDrive download link was updated and the file structures have been reorganized.  
+[2023-02-28] This paper will appear in CVPR 2023.  
+[2023-01-19] The source codes are available, refer to [[here]](./README.md#run-source-codes) for quickly running.  
 [2022-12-16] The OneDrive download link is available.  
 [2022-12-16] The AWS CloudFront download link is offline.  
 [2022-12-06] The script for generating face images from latent codes is available.  
