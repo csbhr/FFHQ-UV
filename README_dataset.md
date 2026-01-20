@@ -3,7 +3,10 @@
 
 ## Download
 - Baidu Netdisk: [download link](https://pan.baidu.com/s/1BbvlTuhlD_PEtT3QZ_ja2g) (extract code: 5wbi).
-- OneDrive: [download link](https://t1h0q-my.sharepoint.com/:f:/g/personal/csbhr_t1h0q_onmicrosoft_com/Em2_9wf4ZD9Bm2JVbnBZKn0B8WuFStiMHu07IYCPRLy7Hw?e=dNwuVW)
+- OneDrive: The previous OneDrive link is no longer active. Due to the high cost of hosting such large files, I can no longer maintain a premium cloud subscription. Baidu Cloud Drive is currently the only free hosting solution available. We apologize for any inconvenience this may cause for international users.
+
+### Call for Mirrors
+To improve accessibility for the global community, we are actively looking for mirror links. If you have access to institutional storage, a server with high bandwidth, or another cloud service and are willing to host a copy of the dataset, please **open an issue or a pull request** to add your mirror link here. Your contribution would be greatly appreciated!
 
 
 ## Dataset file structure
