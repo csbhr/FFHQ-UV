@@ -15,7 +15,7 @@ The dataset is derived from a large-scale face image dataset namely [FFHQ](https
 
 
 ## Updates
-[2026-04-16] We have mirrored the FFHQ-UV dataset on [[Hugging Face]]([./README_flame2hifi3d.md](https://huggingface.co/datasets/csbhr/FFHQ-UV)) for easier access.  
+[2026-04-16] We have mirrored the FFHQ-UV dataset on [[Hugging Face]](https://huggingface.co/datasets/csbhr/FFHQ-UV) for easier access.  
 [2023-07-11] A solution for using our UV-texture maps on a [FLAME](https://flame.is.tue.mpg.de/) mesh is available [[here]](./README_flame2hifi3d.md).  
 [2023-07-10] A more detailed description and a new version of the RGB fitting process is available [[here]](./README_rgb_fitting.md).  
 [2023-07-10] A more detailed description of the facial UV-texture dataset creation pipeline is available [[here]](./README_create_uv_texture.md).  
